@@ -1,0 +1,62 @@
+#Server
+server:
+  port: 9000
+
+#Spring
+spring:
+  application:
+    name: tracking
+  mvc:
+    view:
+      prefix: /
+      suffix: .html
+
+#USPS API
+usps:
+  api:
+    url: http://production.shippingapis.com/ShippingAPI.dll?API=TrackV2&XML=
+#USPS CREDENTIALS
+  user:
+    id: 
+
+
+#UPS API
+ups:
+  api:
+    url: https://wwwcie.ups.com/ups.app/xml/Track
+#UPS CREDENTIALS
+  user:
+    id: upsId
+    password: upsPassword
+    accesslicensenumber: 
+
+#FEDEX API
+fedex:
+  api:
+    url: https://wsbeta.fedex.com:443/web-services
+#FEDEX CREDENTIALS
+  user:
+    accountnumber: 
+    meternumber: 
+    key: 
+    password: 
+
+#Actuator
+management:
+  context-path: /management
+  security:
+    enabled: false
+
+#Swagger/Springfox
+springfox:
+  documentation:
+    swagger:
+      v2:
+        path: /api-docs
+
+#Logging
+logging:
+  level:
+    org:
+      springframework:
+        web: DEBUG
